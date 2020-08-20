@@ -1,0 +1,16 @@
+{
+  "name": "configure-react-app-babel-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gabcamilo/configure-react-app-babel-webpack.git",
+  "author": "Gabriela Carvalho Camilo <gabccamilo.dev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

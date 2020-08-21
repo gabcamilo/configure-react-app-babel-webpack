@@ -56,7 +56,7 @@ Adiciona as funcionalidades do React na conversão.
 
 ```javascript
 const sum = (a, b) => {
-	return a+b
+  return a+b
 }
 ```
 
@@ -66,3 +66,74 @@ const sum = (a, b) => {
 
 Cria ***bundle.js*** com uma sintaxe compatível com a maioria dos browsers.
 
+## Webpack
+
+Para cada tipo de arquivo (.js .css .png) converte o arquivo de uma forma diferente. Utiliza **Loaders**
+
+`yarn add webpack webpack-cli`
+
+`$ yarn add babel-loader`
+
+**Arquivo:** `/webpack.config.js`
+
+```javascript
+const path = require('path');
+
+module.exports = {
+  entry: path.resolve(__dirname, 'src', 'index.js'),
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use:{
+          loader: 'babel-loader',
+        }
+      }
+    ]
+  }
+}
+```
+
+**Gerar o arquivo bundle.js**
+
+`$ yarn webpack --mode development`
+
+**Implementação de um servidor de desenvolvimento para monitoramento de mudanças no código**
+
+`$ yarn add webpack-dev-server -D`
+
+**Arquivo:** `/webpack.config.js`
+
+```diff
+const path = require('path');
+
+module.exports = {
+  entry: path.resolve(__dirname, 'src', 'index.js'),
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js',
+  },
++  devServer : {
++    contentBase: path.resolve(__dirname, 'public'),
++  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use:{
+          loader: 'babel-loader',
+        }
+      }
+    ]
+  }
+}
+```
+
+Inicializa o servidor de desenvolvimento:
+`$ yarn webpack-dev-server --mode development`

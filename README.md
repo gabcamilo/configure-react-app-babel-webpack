@@ -137,3 +137,31 @@ module.exports = {
 
 Inicializa o servidor de desenvolvimento:
 `$ yarn webpack-dev-server --mode development`
+
+## Utilizando o ReactJS
+
+**Arquivo:** `/src/index.src`
+
+```jsx
+import React from 'react';
+import { render } from 'react-dom';
+
+import App from './App'
+
+
+render(<App />, document.getElementById('app'));
+```
+
+**Arquivo:** `/src/App.src`
+
+```jsx
+import React from 'react'
+
+const App = () => {
+  return(
+    <h1>This is a React App!</h1>
+  )
+}
+
+export default App;
+```

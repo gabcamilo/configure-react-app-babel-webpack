@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 
+import './App.css';
 const App = () => {
 	return(
 		<h1>This is a React App!</h1>

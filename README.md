@@ -138,6 +138,20 @@ module.exports = {
 Inicializa o servidor de desenvolvimento:
 `$ yarn webpack-dev-server --mode development`
 
+### Criando scripts para execução do projeto (opcional)
+
+Opcionalmente pode-se criar scripts no **package.json** para executar o projeto ou criar a build de produção de forma mais prática.
+Para tal, basta adicionar ao arquivo as linhas abaixo:
+
+**Arquivo:** `package.json`
+
+```json
+"scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  }
+```
+
 ## Utilizando o ReactJS
 
 **Arquivo:** `/src/index.src`

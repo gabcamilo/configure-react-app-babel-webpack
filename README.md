@@ -165,3 +165,35 @@ const App = () => {
 
 export default App;
 ```
+
+## Importando CSS
+
+`$ yarn add style-loader css-loader`
+
+```diff
+  .
+  .
+  .
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use:{
+          loader: 'babel-loader',
+        }
+      },
++      {
++        test: /\.css$/,
++        exclude: /node_modules/,
++        use:[
++          {loader: 'style-loader'},
++          {loader: 'css-loader'},
++        ]
++      },
+    ]
+  }
+}
+```
+
+[Ver o commit](https://github.com/gabcamilo/configure-react-app-babel-webpack/commit/96b8aad9945e6f0495b05770ca09563699392721)

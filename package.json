@@ -5,6 +5,10 @@
   "repository": "https://github.com/gabcamilo/configure-react-app-babel-webpack.git",
   "author": "Gabriela Carvalho Camilo <gabccamilo.dev@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
   "dependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",

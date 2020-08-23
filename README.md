@@ -29,16 +29,19 @@
 
 Possui a função de transpilar o código do React para um código que o browser entenda.
 
-`$ yarn add @babel/core @babel/preset-env @babel/preset-react`
+`$ yarn add @babel/core @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime`
 
 **Arquivo:** `\babel.config.js`
 
 ```javascript
 module.exports = {
-  presets: [
-    '@babel/preset-env',
-    '@babel/preset-react',
-  ]
+	presets: [
+		'@babel/preset-env',
+		'@babel/preset-react',
+	],
+	plugins: [
+		'@babel/plugin-transform-runtime'
+	]
 }
 ```
 
@@ -49,6 +52,10 @@ Converte o código de um JavaScript mais moderno para um JS mais aintigo **basea
 ### @babel/preset-react
 
 Adiciona as funcionalidades do React na conversão.
+
+### @babel/plugin-transform-runtime
+
+Permite funções assíncronas.
 
 ### Primeira transpilação como babel
 

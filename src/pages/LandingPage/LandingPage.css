@@ -1,0 +1,4 @@
+#landing-page > .icon img {
+	animation: spin 6s linear infinite;
+	width: 250px;
+}

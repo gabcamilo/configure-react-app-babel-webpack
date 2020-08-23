@@ -184,6 +184,8 @@ export default App;
 
 `$ yarn add style-loader css-loader`
 
+**Arquivo:** `/webpack.config.js`
+
 ```diff
   .
   .
@@ -211,3 +213,24 @@ export default App;
 ```
 
 [Ver o commit](https://github.com/gabcamilo/configure-react-app-babel-webpack/commit/96b8aad9945e6f0495b05770ca09563699392721)
+
+## Importando Imagens
+
+`$ yarn add file-loader`
+
+**Arquivo:** `/webpack.config.js`
+
+```javascript
+.
+.
+.
+{
+  test: /.*\.(gif|png|jp?g)$/i,
+  use: {
+    loader: 'file-loader',
+  }
+},
+.
+.
+.
+```
